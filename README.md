@@ -26,13 +26,16 @@
     cross-compiler-i586/bin/i586-gcc
     cross-compiler-i686/bin/i686-gcc
     cross-compiler-x86_64/bin/x86_64-gcc
+    
+    risc-v32/bin/riscv32-unknown-elf-gcc
+    risc-v64/bin/riscv64-unknown-elf-gcc
 ```
 
 # How To Use
 
 ```
-    [root@host] # docker pull r00kiter/cross-cpu-compile:latest
-    [root@host] # docker run -itd r00kiter/cross-cpu-compile:latest sleep 1d
+    [root@host] # docker pull 1565328054/cross-cpu-compile:latest
+    [root@host] # docker run -itd 1565328054/cross-cpu-compile:latest sleep 1d
     [root@host] # docker exec -it [container-id] bash
     [root@container] # vim hello.c
          #include<stdio.h>
@@ -46,7 +49,7 @@
 # How To Build
 
 ```
-    [root@host] # git clone https://github.com/rootkiter/cross-cpu-compile.git
+    [root@host] # git clone https://github.com/zero-MK/cross-cpu-compile.git
     [root@host] # cd cross-cpu-compile
     [root@host] # docker build -t cross-cpu-compile .
     [root@host] # docker images
